@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "redis": "^3.0.2"
+    "express": "^4.17.1",
+    "redis": "^3.0.2",
+    "util": "^0.12.2"
   },
   "devDependencies": {},
   "scripts": {
