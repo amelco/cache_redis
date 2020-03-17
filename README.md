@@ -44,4 +44,4 @@ $ npm install
 ```
 node app.js
 ```
-- Abra o navegador com alguma das rotas supracitadas.
+- Abra o navegador em alguma das rotas supracitadas.
