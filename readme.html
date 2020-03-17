@@ -1,0 +1,37 @@
+<h1 id="caching-fatorial">Caching fatorial</h1>
+<h2 id="atividade-2-da-disciplina-de-banco-de-dados">Atividade 2 da disciplina de Banco de Dados</h2>
+<p>Essa atividade pede para se criar um servidor redis para ser utilizado como um cache para o cálculo de fatoriais.</p>
+<p>Caso seja a primeira vez que se peça o fatorial de um número, o fatorial é calculado e o resultado é informado.<br />
+Caso seja a segunda vez (ou mais), o resultado deve ser buscado no cache redis ao invés de ser recalculado.</p>
+<p>Foi feita uma pequena aplicação web com as seguintes rotas:</p>
+<ul>
+<li>Rota 1</li>
+</ul>
+<pre><code>localhost:3000/fatorial/5</code></pre>
+<p>onde o número <code>5</code> é o número em que se deseja obter o fatorial.<br />
+Essa rota retorna o fatorial e avisa se o número foi calculado ou retirado do cache.</p>
+<ul>
+<li>Rota 2</li>
+</ul>
+<pre><code>localhost:3000/deleteAll</code></pre>
+<p>caso queira excluir todos os dados do cache.</p>
+<h2 id="utilização">Utilização</h2>
+<ul>
+<li>instalando redis via docker</li>
+</ul>
+<pre><code>$ docker run -p 6379:6379 -d redis redis-server --appendonly yes</code></pre>
+<ul>
+<li>clone o repositório</li>
+</ul>
+<pre><code>$ git clone  https://github.com/amelco/cache_redis.git</code></pre>
+<ul>
+<li>instale as dependências</li>
+</ul>
+<pre><code>$ npm install</code></pre>
+<ul>
+<li>execute o programa (servidor http)</li>
+</ul>
+<pre><code>node app.js</code></pre>
+<ul>
+<li>Abra o navegador com alguma das rotas supracitadas.</li>
+</ul>
